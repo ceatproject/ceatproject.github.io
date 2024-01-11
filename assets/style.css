@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -10,6 +10,17 @@
   align-items: center;
   z-index: 1000;
 }
+
+.parent-element { /* Reemplazar con el elemento padre real si es necesario */
+  overflow: visible; /* O auto si necesitas que sea scrollable */
+}
+
+@media (max-width: 768px) {
+  .popup-content {
+    width: 80%; /* O cualquier otra medida para pantallas más pequeñas */
+  }
+}
+
 
 .popup-content {
   background: #fff;
