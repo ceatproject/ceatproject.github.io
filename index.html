@@ -308,7 +308,8 @@ Person-months in project: 6</td>
 
 
 
-<script>mendeleyWebImporter = {
+<script>
+mendeleyWebImporter = {
   downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
   open() { return this._call('open', []); },
   setLoginToken(e) { return this._call('setLoginToken', [e]); },
@@ -324,7 +325,19 @@ Person-months in project: 6</td>
       });
     });
   }
-};</script>
+};
+
+window.onload = function() {
+  setTimeout(function() {
+    document.getElementById("popup-finalizado").style.display = "block";
+  }, 2000); // El pop-up aparecerá después de 2000 milisegundos (2 segundos)
+};
+
+function cerrarPopup() {
+  document.getElementById("popup-finalizado").style.display = "none";
+}
+	
+</script>
 
 <div id="popup-finalizado" class="popup-container" style="display:none;">
   <div class="popup-content">
