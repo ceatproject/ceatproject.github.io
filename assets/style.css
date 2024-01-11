@@ -1,14 +1,16 @@
-.popup-content {
+.popup-container {
+  position: fixed;
   width: 50%; /* Ancho del contenido del pop-up */
   margin: auto; /* Esto centrará el bloque en el eje horizontal */
-  padding: 20px; /* Espacio interno */
-  background: #fff;
-  border-radius: 5px;
-  text-align: center;
-  /* Agrega un max-width si es necesario para evitar que sea demasiado ancho en pantallas grandes */
-  max-width: 600px; /* O el valor máximo que prefieras */
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
 }
-
 
 .parent-element { /* Reemplazar con el elemento padre real si es necesario */
   overflow: visible; /* O auto si necesitas que sea scrollable */
